@@ -1,6 +1,7 @@
 <?php
 require "./header.php";
-if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
+require "./helper.php";
+if (isLogIn()) {
 ?>
   <script type="text/javascript">
     location.replace("index.php"); // منتقل شود index.php به صفحه

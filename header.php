@@ -23,15 +23,27 @@ session_start();
         <li class="nav-item active">
           <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./login.php">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./signup.php">SignUp</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cart</a>
-        </li>
+        <?php
+        if (isLogIn()) {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="./login.php">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./signup.php">SignUp</a>
+          </li>
+        <?php
+        } else {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LogOut</a>
+          </li>
+        <?php
+        }
+        ?>
       </ul>
     </div>
   </nav>
