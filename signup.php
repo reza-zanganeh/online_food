@@ -1,5 +1,4 @@
 <?php
-require "./header.php";
 require "./db.php";
 require "./helper.php";
 if (isLogIn()) {
@@ -9,8 +8,6 @@ if (isLogIn()) {
   </script>
 <?php
 }
-?>
-<?php
 try {
   $form_message = "";
   if (
@@ -29,7 +26,6 @@ try {
       $password = $_POST['password'];
       $query = "INSERT INTO user (username,fullname,password) VALUES ('$username','$fullname','$password')";
       $result = mysqli_query($link, $query);
-      echo $result;
       mysqli_close($link);
       if ($result) {
         $form_message = "Registration is successful";

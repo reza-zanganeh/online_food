@@ -1,6 +1,3 @@
-<?php
-require "./header.php";
-?>
 <div id="foods-container" class="container pt-5 pb-5 d-flex flex-wrap justify-content-center">
 	<div class="food card mb-5 mr-4 ml-4" style="width: 18rem;">
 		<img class="card-img-top" src="./images/foods/1.jpeg" alt="Card image cap">
